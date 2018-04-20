@@ -1,0 +1,28 @@
+
+
+        <h2>Welcome, <?php echo $uname; ?></h2>
+
+        <p class="userlist"> All User List</p>
+
+        <table class="tbl_one">
+            <tr>
+                <th>Serial</th>
+                <th>Name</th>
+                <th>Profile</th>
+            </tr>
+
+            <?php
+            $i = 0;
+            $allUser = $user->getAllUsers();
+            foreach ($allUser as $users) {
+                $i++;
+                ?>
+
+                <tr>
+                    <td><?php echo $i; ?></td>
+                    <td><?php echo $users['name']; ?></td>
+                    <td><a href="userProfile.php?id=<?php echo $users['user_id']; ?>" >View Details</a></td>
+                </tr>
+            <?php }
+            ?>
+        </table>

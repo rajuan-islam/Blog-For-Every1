@@ -1,0 +1,12 @@
+<?php session_start();
+require_once "functions.php";
+$user = new LoginRegistration();
+$uid = $_SESSION['uid'];
+$uname = $_SESSION['uname'];
+
+if (!$user->getSession()) {
+    header('Location: index.php');
+    exit();
+}
+?>
+

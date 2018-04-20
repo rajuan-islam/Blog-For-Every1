@@ -1,0 +1,27 @@
+<option>--Select Categories--</option>
+                                        <option value="1">Uncategorised</option>
+                                        <option value="2">Personal</option>
+                                        <option value="3">Schools</option>
+                                        <option value="4">Non-profits</option>
+                                        <option value="5">Politics</option>
+                                        <option value="6">Military</option>
+                                        <option value="7">Private</option>
+                                        <option value="8">Sports</option>
+                                        <option value="9">How-to, tips and reviews</option>
+                                        <option value="10">SEO blogs</option>
+                                        <option value="11">Affiliate marketing blogs</option>
+                                        <option value="12">Book tour blogs</option>
+                                        <option value="13">Business</option>
+
+
+
+
+
+
+<?php
+                                        $getAllCategories = $user->getAllCategories();
+
+                                        foreach ($getAllCategories as $getAllCategory) {
+                                            echo "<option value='" . $getAllCategory['cat_id'] . "'>" . $getAllCategory['cat_name'] . "</option>";
+                                        }
+                                        ?>
